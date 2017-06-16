@@ -48,7 +48,7 @@ function startApp() {
         $('#formRegister').trigger('reset');
         showView('viewRegister');
     }
-}
+
 
 // user/login
     function loginUser() {
