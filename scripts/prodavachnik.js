@@ -1,48 +1,44 @@
 function startApp() {
-	showHideMenuLinks();
+    showHideMenuLinks();
     showHomeView();
-
 
     // Bind the navigation menu links
     $("#linkHome").click(showHomeView);
     $("#linkLogin").click(showLoginView);
     $("#linkRegister").click(showRegisterView);
-	$("#linkListAds").click(listAdverts);
-	$("#linkLogout").click(logoutUser);
-	
-	$("#buttonLoginUser").click(loginUser);
+    $("#linkListAds").click(listAdverts);
+    $("#linkLogout").click(logoutUser);
+
+    // Bind the form submit buttons
+    $("#buttonLoginUser").click(loginUser);
     $("#buttonRegisterUser").click(registerUser);
-	
-	const kinveyBaseUrl = "https://mock.api.com/";
+
+    const kinveyBaseUrl = "https://mock.api.com/";
     const kinveyAppKey = "kid_rk";
     const kinveyAppSecret = "736804a668";
-
-
-
 
     function showView(viewName) {
         // Hide all views and show the selected view only
         $('main > section').hide();
         $('#' + viewName).show();
     }
-	
-	function showHideMenuLinks() {
+
+    function showHideMenuLinks() {
         $("#linkHome").show();
         if (sessionStorage.getItem('authToken') === null) {
             // No logged in user
             $("#linkLogin").show();
             $("#linkRegister").show();
-			$("#linkListAds").hide();
+            $("#linkListAds").hide();
             $("#linkLogout").hide();
         } else {
             // We have logged in user
             $("#linkLogin").hide();
             $("#linkRegister").hide();
-			$("#linkListAds").show();
+            $("#linkListAds").show();
             $("#linkLogout").show();
         }
     }
-
 
     function showHomeView() {
         showView('viewHome');
@@ -58,8 +54,7 @@ function startApp() {
         showView('viewRegister');
     }
 
-
-// user/login
+    // user/login
     function loginUser() {
         const kinveyLoginUrl = kinveyBaseUrl + "user/" + kinveyAppKey + "/login";
         const kinveyAuthHeaders = {
@@ -91,7 +86,8 @@ function startApp() {
         let userId = userInfo._id;
         sessionStorage.setItem('userId', userId);
     }
-// user/register
+
+    // user/register
     function registerUser() {
         const kinveyRegisterUrl = kinveyBaseUrl + "user/" + kinveyAppKey + "/";
         const kinveyAuthHeaders = {
@@ -126,9 +122,8 @@ function startApp() {
         showHideMenuLinks();
         showHomeView();
     }
-}
 
-// advertisement/all
+    // advertisement/all
     function listAdverts() {
         $('#ads').empty();
         showView('viewAds');
@@ -169,4 +164,4 @@ function startApp() {
             }
         }
     }
-
+}
