@@ -7,6 +7,7 @@ function startApp() {
     $("#linkLogin").click(showLoginView);
     $("#linkRegister").click(showRegisterView);
     $("#linkListAds").click(listAdverts);
+
     $("#linkCreateAd").click(showCreateAdView);
     $("#linkLogout").click(logoutUser);
 
@@ -15,6 +16,7 @@ function startApp() {
     $("#buttonRegisterUser").click(registerUser);
     $("#buttonCreateAd").click(createAdvert);
     $("#buttonEditAd").click(editAdvert);
+
 
     const kinveyBaseUrl = "https://mock.api.com/";
     const kinveyAppKey = "kid_rk";
@@ -58,6 +60,7 @@ function startApp() {
         $('#formRegister').trigger('reset');
         showView('viewRegister');
     }
+
 
     function showCreateAdView() {
         $('#formCreateAd').trigger('reset');
@@ -298,4 +301,5 @@ function startApp() {
             listAdverts();
         }
     }
+  }
 }
