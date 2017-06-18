@@ -87,6 +87,14 @@ input{
     transition: .5s ease-in;
 }
 
+#infoBox, #errorBox, #loadingBox {
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    transition: .5s ease-in;
+}
+
 input[type=text]{
     color: white;
     font: 16px 'Open Sans', sans-serif;
@@ -107,6 +115,16 @@ input[type=button]:hover{
     border-color: #00bbbb;
     transform: scale(1.1);
     cursor: pointer;
+}
+
+#loadingBox {
+    background: #7CB3E9;
+}
+#infoBox {
+    background: #393;
+}
+#errorBox {
+    background: #F50;
 }
 
 table{
