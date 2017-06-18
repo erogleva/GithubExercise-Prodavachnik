@@ -47,9 +47,6 @@ function startApp() {
     const kinveyAppKey = "kid_rk";
     const kinveyAppSecret = "736804a668";
 
-    const kinveyBaseUrl = "https://mock.api.com/";
-    const kinveyAppKey = "kid_rk";
-    const kinveyAppSecret = "736804a668";
 
     function showView(viewName) {
         // Hide all views and show the selected view only
@@ -369,6 +366,6 @@ function startApp() {
             listAdverts();
         }
     }
-  }
 }
+
 
