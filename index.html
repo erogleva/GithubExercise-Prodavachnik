@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Prodavachnik</title>
     <script src="scripts/jquery-3.1.1.min.js"></script>
-	<script src="scripts/jquery.mockjax.min.js"></script>
+    <script src="scripts/jquery.mockjax.min.js"></script>
     <script src="scripts/api.js"></script>
     <script src="scripts/prodavachnik.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/prodavachnik.css" />
@@ -13,15 +13,22 @@
 
 <body>
 <header id="menu" class="menu">
-    <a href="#" id="linkHome" class="menu-item">>Home</a>
-    <a href="#" id="linkLogin" class="menu-item">>Login</a>
-    <a href="#" id="linkRegister" class="menu-item">>Register</a>
+    <a href="#" id="linkHome" class="menu-item" >Home</a>
+    <a href="#" id="linkLogin" class="menu-item">Login</a>
+    <a href="#" id="linkRegister" class="menu-item">Register</a>
     <a href="#" id="linkListAds" class="menu-item">List Advertisements</a>
-    <a href="#" id="linkLogout" class="menu-item">>Logout</a>
+    <a href="#" id="linkLogout" class="menu-item">Logout</a>
+    <span id="loggedInUser" class="menu-item"></span>
     <div></div>
 </header>
 
 <main>
+    <section id="loadingBox" class="loadingBox">Loading ...</section>
+
+    <section id="infoBox" class="infoBox">Info</section>
+
+    <section id="errorBox" class="errorBox">Error</section>
+
     <section id="viewHome" class="viewHome">
         <h1 class="title">Welcome</h1>
         <p class="body-text">Welcome to our advertisement site.</p>
