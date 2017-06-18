@@ -302,4 +302,4 @@ function startApp() {
         }
     }
   }
-}
+
