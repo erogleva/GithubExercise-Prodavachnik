@@ -17,6 +17,8 @@
     <a href="#" id="linkLogin" class="menu-item">Login</a>
     <a href="#" id="linkRegister" class="menu-item">Register</a>
     <a href="#" id="linkListAds" class="menu-item">List Advertisements</a>
+    <a href="#" id="linkLogout" class="menu-item">Logout</a>
+    <span id="loggedInUser" class="menu-item"></span>
     <a href="#" id="linkCreateAd" class="menu-item">Create Advertisement</a>
     <a href="#" id="linkLogout" class="menu-item">Logout</a>
     <span id="loggedInUser" class="menu-item"></span>
@@ -102,6 +104,7 @@
         </form>
     </section>
 
+
     <section id="viewDetailsAd" class="viewDetailsAd">
     </section>
 
@@ -112,12 +115,14 @@
             <div><input type="hidden" name="publisher" required /></div>
             <div>Title:</div>
             <div><input type="text" name="title" required /></div>
+
             <div>Description:</div>
             <div><textarea name="description" rows="10" required></textarea></div>
             <div>Date Published:</div>
             <div><input type="date" name="datePublished" required /></div>
             <div>Price:</div>
             <div><input type="number" step="0.01" name="price" required /></div>
+
             <div>Image:</div>
             <div><input type="text" name="image" required /></div>
             <div><input type="button" id="buttonEditAd" value="Edit" /></div>

@@ -223,6 +223,9 @@
                             advert.datePublished = data.datePublished;
                             advert.price = data.price;
 							advert.image = data.image;
+                            advert.publisher = data.publisher;
+                            advert.datePublished = data.datePublished;
+                            advert.price = data.price;
                             this.responseText = advert;
                         }
                         this.responseText = {};
